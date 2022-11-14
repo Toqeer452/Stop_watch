@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Stop Watch"
+
+        android:icon="@drawable/ic_baseline_access_alarm_24"
+        android:id="@+id/clock"/>
+    <item
+        android:title="Manue"
+        app:showAsAction="collapseActionView"
+        android:icon="@drawable/ic_baseline_menu_open_24"
+        android:id="@+id/menu"/>
+    <item
+        android:title="Stop Watch"
+
+        android:icon="@drawable/ic_baseline_av_timer_24"
+        android:id="@+id/clock2"/>
+    <item
+        android:title="Stop Watch"
+
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/profile"/>
+</menu>
