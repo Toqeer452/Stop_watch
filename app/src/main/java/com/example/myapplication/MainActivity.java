@@ -16,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+
 public class MainActivity extends AppCompatActivity {
 
     CountDownTimer countDownTimer;
@@ -39,10 +40,13 @@ public class MainActivity extends AppCompatActivity {
 
 }
     public void starttime (View v){
-        countDownTimer = new CountDownTimer(30000, 1000) {
+        int time = 0;
+        countDownTimer = new CountDownTimer(61000, 1000) {
 
             public void onTick(long millisUntilFinished) {
+//                binding.time.setText(""+millisUntilFinished / 1000);
                 binding.time.setText(""+millisUntilFinished / 1000);
+//                int pp = (int) (millisUntilFinished / 1000);
                 int pp = (int) (millisUntilFinished / 1000);
                 
                 binding.progressBar.setProgress(pp);
