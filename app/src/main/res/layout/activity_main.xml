@@ -19,7 +19,7 @@
             android:indeterminate="false"
             android:max="60"
             android:progress="0"
-            android:layoutDirection="rtl"
+           
             android:progressDrawable="@drawable/circle_prog"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
