@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        mp = MediaPlayer.create(this, R.raw.buzzer);
-        sp = MediaPlayer.create(this,R.raw.buzzer);
 
 
 
@@ -45,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 }
     public void starttime (View v){
         int time = 0;
+
+        mp = MediaPlayer.create(this, R.raw.buzzer);
+        sp = MediaPlayer.create(this,R.raw.buzzer);
         countDownTimer = new CountDownTimer(61000, 1000) {
             public void onTick(long millisUntilFinished) {
                 mp.start();
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.time.setText(""+millisUntilFinished / 1000);
 //                int pp = (int) (millisUntilFinished / 1000);
                 int pp = (int) (millisUntilFinished / 1000);
+                int newpp =  60-pp;
 
                 if (pp<56){
                     if (mp.isPlaying()){
@@ -65,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                binding.progressBar.setProgress(pp);
+
+                binding.progressBar.setProgress(newpp);
                 // logic to set the EditText could go here
             }
 
@@ -81,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
     
     public void stoptime (View v) {
         countDownTimer.cancel();
-
+        mp.reset();
+        sp.reset();
     }
 
 
